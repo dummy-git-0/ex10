@@ -39,5 +39,6 @@ public class APIController extends HttpServlet {
         } catch (Exception e) {
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             out.println(e.getMessage());
-        }    }
+        }
+    }
 }

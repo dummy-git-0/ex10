@@ -12,11 +12,10 @@ import java.net.http.HttpResponse;
 public class APIService {
     private static final APIService instance = new APIService();
     private final HttpClient httpClient = HttpClient.newHttpClient();
-    public static APIService getInstance()
-    {
+
+    public static APIService getInstance() {
         return instance;
     }
-
 
     private APIService() {
         Dotenv dotenv = Dotenv.load();
