@@ -1,9 +1,8 @@
 package org.example.model;
 
-public enum ModelType
-{
+public enum ModelType {
     GROQ_LLAMA("llama-3.3-70b-versatile", ModelPlatform.GROQ),
-    TOGETHER_LLAMA("meta-llama/Llama-3.3-70B-Instruct-Turbo", ModelPlatform.TOGETHER),;
+    TOGETHER_LLAMA("meta-llama/Llama-3.3-70B-Instruct-Turbo", ModelPlatform.TOGETHER);
 
     ModelType(String name, ModelPlatform platform) {
         this.name = name;
