@@ -33,7 +33,6 @@ public class APIController extends HttpServlet {
         String modelParam = req.getParameter("model");
         ModelType model = ModelType.valueOf(modelParam);
         // GROQ_LLAMA, TOGETHER_LLAMA
-
         resp.setContentType("application/json; application/json");
         resp.setCharacterEncoding("UTF-8");
         PrintWriter out = resp.getWriter();

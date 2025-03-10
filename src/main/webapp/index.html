@@ -20,5 +20,23 @@
         <button>묻기</button>
     </form>
 </div>
+<script>
+    const controller = document.querySelector("#controller");
+    controller.addEventListener("submit",async (event) => {
+        event.preventDefault();
+        // alert("폼폼 폼클렌징")
+        const prompt = document.querySelector("#prompt").value;
+        const model = document.querySelector("#model").value;
+        // alert(`${prompt} ${model}`);
+
+        const response = await fetch(`./api?prompt=${prompt}&model=${model}`, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        const json = await response.json();
+        alert(JSON.stringify(json));
+    })
+</script>
 </body>
 </html>
